@@ -1,5 +1,7 @@
 package com.imrohansoni.nixiui.components.calendar
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -23,7 +25,7 @@ enum class HighlightStyle {
     NONE, OUTLINED, FILLED, DOT,
 }
 
-
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun Calendar(
     modifier: Modifier = Modifier,

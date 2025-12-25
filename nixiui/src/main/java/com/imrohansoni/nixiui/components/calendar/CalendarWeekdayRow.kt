@@ -1,5 +1,7 @@
 package com.imrohansoni.nixiui.components.calendar
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -16,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import java.time.DayOfWeek
 
+@RequiresApi(Build.VERSION_CODES.O)
 private fun getWeekDays(startOfWeek: DayOfWeek): List<String> {
     val weekdays = if (startOfWeek == DayOfWeek.MONDAY)
         listOf("mo", "tu", "we", "th", "fr", "sa", "su")
@@ -25,6 +28,7 @@ private fun getWeekDays(startOfWeek: DayOfWeek): List<String> {
     return weekdays
 }
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun CalendarWeekdayRow(startOfWeek: DayOfWeek, textColor: Color) {
     val weekdays = remember(startOfWeek) {

@@ -1,5 +1,7 @@
 package com.imrohansoni.nixiui.components.calendar
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -17,6 +19,7 @@ import com.imrohansoni.nixiui.R
 import com.imrohansoni.nixiui.components.buttons.IconButton
 import java.time.YearMonth
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun CalendarHeader(
     headerColor: Color,
